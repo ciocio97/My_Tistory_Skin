@@ -12,6 +12,30 @@
       <div id="acc-nav">
         <a href="#content">본문 바로가기</a>
       </div>
+      <div id="wrap">
+        <header id="header">
+          <div class="inner">
+            <h1>
+              <a href="[##_blog_link_##]">
+                <s_if_var_logo>
+                  <img src="[##_var_logo_##]" alt="[##_title_##]">
+                </s_if_var_logo>
+                <s_not_var_logo>
+                  개발이 하고싶니? 디자이너가 되고싶어?
+                </s_not_var_logo>
+              </a>
+            </h1>
+            <div class="util">
+              <div class="search">
+                <s_search>
+                  <input type="text" name="[##_search_name_##]" value="[##_search_text_##]" placeholder="검색내용을 입력하세요." onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }">
+						      <button type="submit" onclick="[##_search_onclick_submit_##]">검색</button>
+                </s_search>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
     </s_t3>
     <!-- <div id="container">
       <div id="top">
