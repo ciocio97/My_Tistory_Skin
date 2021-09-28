@@ -1,3 +1,191 @@
+@charset "utf-8";
+
+/*
+ * CSS CONTENTS:
+ *
+ * 01. Web Font
+ *
+ *
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200&display=swap');
+
+body {
+  -webkit-text-size-adjust: 100%;
+  font-weight: 400;
+  font-family: 'Ubuntu', 'Nanum Gothic', sans-serif;
+  /*기본 폰트 크기: 16px*/
+  font-size: 1em;
+  /*줄간격*/
+  line-height: 1.25;
+  color: #242424;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*%와em은 부모 요소에 대한 상대적인 단위*/
+  font-size: 100%;
+}
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, figure {
+	margin: 0;
+	padding: 0;
+}
+header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption {
+	display: block;
+}
+
+/* Layout Selector */
+#header {
+  border-bottom: 1px solid transparent;
+}
+#header .inner {
+  position:relative;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+#header h1 {
+  padding: 23px 0;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  font-weight: 800;
+  font-size: 1.5em;
+  /*줄간격*/
+  line-height: 32px;
+  /*자간*/
+  letter-spacing: 1px;
+  color: #242424;
+}
+#header h1 a {
+  /*inline과 다르게 너비,높이,마진,패딩값 모두 적용 가능*/
+  /*같은 라인에 있는 친구들에도 반영됨*/
+  display: inline-block;
+  height: 32px;
+  /*a태그 자체의 특수 효과를 지워줌*/
+  text-decoration: none;
+  color: #242424;
+  vertical-align: middle;
+}
+#header h1 img {
+  width: auto;
+  /*줄간격과 이미지의 높이를 맞추면 땅땅:)*/
+  height: 32px;
+}
+/*검색창 위치 고정*/
+#header .util {
+  /*position은 left,right,top,bottom이랑 같이 쓰는거구나..*/
+  position: absolute;
+  top: 24px;
+  right: 0;
+}
+/*검색 아이콘 + transition*/
+#header .util .search{
+  position: relative;
+  float: left;
+  overflow: hidden;
+  /*동그라미 크기로 짜부시킴ㅋㅋㅋ*/
+  width: 32px;
+  background-color: #fff;
+  transition: width 0.5s;
+  -webkit-transition: width 0.5s;
+}
+/*검색 아이콘 디자인 (클릭전)*/
+#header .util .search:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  /*양수:들여쓰기, 음수:내어쓰기*/
+  text-indent: -999em;
+  background: #fff url() no-repeat 0 0;
+  vertical-align: middle;
+  outline: none;
+  /*마우스 올리면 커서 생기게*/
+  cursor: pointer;
+}
+/*검색창*/
+#header .util .search input {
+  width: 32px;
+  height: 32px;
+  padding: 5px 15px;
+  border: 0;
+  background-color: transparent;
+  font-size: 0.875em;
+	line-height: 1;
+	outline: none;
+}
+#header .util .search input:focus {
+  border-color: #484848;
+}
+#header .util .search input::placeholder {
+	color: #969696;
+}
+#header .util .search button {
+  /*relative가 아니라 absolute니까 검색아이콘과 겹쳐짐*/
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  /*검색 아이콘보다 밑에 ^-^*/
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+  text-indent: -999em;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background: #fff url() no-repeat -1px -1px;
+  vertical-align: middle;
+  outline: none;
+}
+/*<s_search>안에 on이라는 메서드가 있는듯 ?*/
+#header .util .search.on {width: 200px;}
+#header .util .search.on:before {content: none;}
+#header .util .search.on input {
+  display: block;
+  width: 100%;
+  border: 1px solid #eee;
+  border-radius: 32px;
+}
+#header .util .search.on button {border-color: transparent;}
+
+/*프로필*/
+
+
+#acc-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 0;
+}
+
+#acc-nav a {
+  display: block;
+  position: inherit;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+
+  width: 1px;
+  height: 1px;
+  margin-left: -1px;
+  margin-bottom: -1px;
+
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.875em;
+  color: #000;
+}
+
 /* body {
   margin: 0;
   box-sizing: border-box;
@@ -66,31 +254,3 @@ aside {
   margin-top: 7em;
   background-color: #567957;
 } */
-
-#acc-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  width: 100%;
-  height: 0;
-}
-
-#acc-nav a {
-  display: block;
-  position: inherit;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  white-space: nowrap;
-
-  width: 1px;
-  height: 1px;
-  margin-left: -1px;
-  margin-bottom: -1px;
-
-  text-align: center;
-  font-weight: bold;
-  font-size: 0.875em;
-  color: #000;
-}
