@@ -46,6 +46,7 @@ div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, 
 header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption {
 	display: block;
 }
+/*여기부터 다시*/
 button, input[type=submit], input[type=reset], input[type=button] {
 	overflow: visible;
 	cursor: pointer;
@@ -216,7 +217,7 @@ a:active {text-decoration:none;}
 	border-radius: 32px;
 }
 #header .util .search.on button {border-color: transparent;}
-
+/*#header는 여기부터*/
 #header .util .profile {
 	position: relative;
 	float: left;
@@ -348,6 +349,7 @@ a:active {text-decoration:none;}
 	visibility: hidden;
 }
 
+/*메뉴 시작*/
 #aside {
 	float: right;
 	width: 21.296296296296296%;
@@ -1865,6 +1867,7 @@ a:active {text-decoration:none;}
 }
 
 /* Aside(sidebar) */
+/*메뉴바okok*/
 .sidebar h2 {
 	margin-bottom: 7px;
 	font-weight: 500;
