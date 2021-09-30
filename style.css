@@ -105,7 +105,7 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
   border-radius: 50%;
   /*양수:들여쓰기, 음수:내어쓰기*/
   text-indent: -999em;
-  background: #fff url() no-repeat 0 0;
+  background: #fff url(./images/search-interface-symbol.svg) no-repeat 0 0;
   vertical-align: middle;
   outline: none;
   /*마우스 올리면 커서 생기게*/
@@ -140,7 +140,7 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
   text-indent: -999em;
   border: 1px solid transparent;
   border-radius: 50%;
-  background: #fff url() no-repeat -1px -1px;
+  background: #fff url(./images/search-interface-symbol.svg) no-repeat -1px -1px;
   vertical-align: middle;
   outline: none;
 }
@@ -155,7 +155,20 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
 }
 #header .util .search.on button {border-color: transparent;}
 
-/*프로필*/
+/*메뉴*/
+#aside {
+  float: left;
+  width: 21.296296296296296%;
+  padding: 75px 0 32px;
+}
+/*Dom 조작해서 메뉴 창 열고 닫기?*/
+#aside .close {
+  display: none;
+}
+
+
+
+
 
 
 #acc-nav {
