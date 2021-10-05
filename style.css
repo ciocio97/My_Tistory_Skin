@@ -5,6 +5,8 @@
  *
  * 01. Web Font
  *
+ * 
+ * 08. Aside(sidebar)
  *
 */
 
@@ -105,7 +107,7 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
   border-radius: 50%;
   /*양수:들여쓰기, 음수:내어쓰기*/
   text-indent: -999em;
-  background: #fff url(./images/search-interface-symbol.svg) no-repeat 0 0;
+  background: rgb(146, 27, 27) url(./images/search-interface-symbol.svg) no-repeat 0 0;
   vertical-align: middle;
   outline: none;
   /*마우스 올리면 커서 생기게*/
@@ -145,6 +147,7 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
   outline: none;
 }
 /*<s_search>안에 on이라는 메서드가 있는듯 ?*/
+/*onclick="[##_search_onclick_submit_##]"*/
 #header .util .search.on {width: 200px;}
 #header .util .search.on:before {content: none;}
 #header .util .search.on input {
@@ -164,6 +167,41 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
 /*Dom 조작해서 메뉴 창 열고 닫기?*/
 #aside .close {
   display: none;
+}
+/*메뉴 내 글씨 디자인*/
+.sidebar h2 {
+  margin-bottom: 7px;
+  font-weight: 500;
+  font-size: 0.875em;
+  color: #555;
+}
+.sidebar ul li {
+  padding: 4px 0 5px;
+  font-size: 0.8125em;
+  line-height: 1.25em;
+  color: #777;
+}
+.sidebar ul li a {
+  color: #777;
+}
+.sidebar ul li a:hover {
+  color: #333;
+}
+.sidebar .menu .my-menu {
+  display: flex;
+  justify-content: space-evenly;
+}
+/*메뉴 관리창 & 카테고리 경계*/
+.sidebar .sidebar-1 {
+  margin-top: 38px;
+  border-top: 1px solid #eee;
+  padding-top: 46px;
+}
+/*메뉴 카테고리 & 공지 경계*/
+.sidebar .sidebar-2 {
+  margin-top: 38px;
+  border-top: 1px solid #eee;
+  padding-top: 46px;
 }
 
 
