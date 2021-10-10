@@ -159,6 +159,7 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
 #header .util .search.on button {border-color: transparent;}
 
 /*메뉴*/
+/*메뉴*/
 #aside {
   float: left;
   width: 21.296296296296296%;
@@ -203,6 +204,170 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
   border-top: 1px solid #eee;
   padding-top: 46px;
 }
+/*메뉴 내 카테고리 디자인*/
+.sidebar .category {
+  margin-bottom: 36px;
+}
+/*시작*/
+.sidebar .category ul li {
+  padding: 0;
+  font-size: 0.875em;
+  font-weight: 600;
+}
+.sidebar .category ul li a {
+  color: #555;
+}
+.sidebar .category ul li a:hover {
+  color: #333;
+}
+/*중간*/
+.sidebar .category ul li ul {
+	padding-top: 8px;
+}
+.sidebar .category ul li ul li {
+	padding: 6px 0 7px;
+	font-weight: 400;
+	font-size: 1em;
+}
+/*끝*/
+.sidebar .category ul li ul li ul {
+	overflow: hidden;
+	margin-bottom: -4px;
+	padding-top: 6px;
+}
+.sidebar .category ul li ul li ul li {
+	position: relative;
+	padding: 3px 0 3px 9px;
+	/* border-left: 2px solid #eee; */
+	font-size: 0.8125rem;
+}
+.sidebar .category ul li ul li ul li:before {
+	/*대체 컨텐츠*/
+  /*::before or ::after에만 적용가능한 속성들이 또 있뜸*/
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #eee;
+}
+/*끝의 왼쪽 회색 줄*/
+.sidebar .category ul li ul li ul li:first-child:before {
+	top: 7px;
+	bottom: auto;
+}
+/*끝의 a태그 연회색*/
+.sidebar .category ul li ul li ul li a {
+	color: #999;
+}
+/*공지사항*/
+.sidebar .notice {
+	margin-bottom: 37px;
+}
+/*페이스북, 인스타 등등 뭔지 모르겠음*/
+/*HTML에서는 주석처리로 막아놓음*/
+.sidebar .social-list {
+  margin-bottom: 46px;
+}
+.sidebar .social-list h2 {
+  margin-bottom: 18px;
+}
+.sidebar .social-list .tab-list {
+  overflow: hidden;
+  width: 100%;
+}
+.sidebar .social-list ul li {
+	margin-bottom: 15px;
+	padding: 0 0 0 48px;
+}
+.sidebar .social-list ul li a {
+  display: block;
+  text-decoration: none;
+}
+.sidebar .social-list ul li a:hover .text {
+  text-decoration: underline;
+}
+.sidebar .social-list ul li .avatar {
+	float: left;
+	overflow: hidden;
+	width: 40px;
+	height: 40px;
+	margin-left: -48px;
+	border-radius: 50%;
+}
+.sidebar .social-list ul li .title {
+	display: block;
+}
+.sidebar .social-list ul li .date {
+	display: block;
+	margin-top: 6px;
+	font-size: 0.75rem;
+	color: #777;
+}
+/*전체 방문자 수*/
+.sidebar .count {
+	margin-bottom: 46px;
+}
+.sidebar .count h2 {
+	margin-bottom: 3px;
+}
+.sidebar .count h2:before {
+	content: "";
+	display: block;
+	width: 17px;
+	height: 1px;
+	margin-bottom: 18px;
+	background-color: #555;
+}
+.sidebar .count p {
+	margin-bottom: 6px;
+	font-size: 0.8125em;
+	color: #777;
+}
+.sidebar .count .total {
+	margin-bottom: 12px;
+	font-weight: 700;
+	font-size: 1.875em;
+	color: #555;
+}
+/*페북, 인스타, 트위터, 유투브*/
+.sidebar .social-channel {
+  margin-bottom: 48px;
+}
+.sidebar .social-channel ul {
+  overflow: hidden;
+  width: 100%;
+}
+.sidebar .social-channel ul li {
+  float: left;
+  margin-left: 10px;
+  padding: 0;
+}
+.sidebar .social-channel ul li:first-child {
+	margin-left: 0;
+}
+.sidebar .social-channel ul li a {
+  display: block;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #eee;
+	border-radius: 50%;
+  /*list의 점만 남고 text가 사라짐*/
+  text-indent: -999em;
+  background-color: aquamarine;
+}
+.sidebar .social-channel ul li.youtube a {
+	background-position-x: -50px;
+}
+.sidebar .social-channel ul li.instagram a {
+	background-position-x: -100px;
+}
+.sidebar .social-channel ul li.twitter a {
+	background-position-x: -150px;
+}
+
+
 
 
 
