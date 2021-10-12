@@ -60,6 +60,8 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
   /*자간*/
   letter-spacing: 1px;
   color: #242424;
+  /*그렇게 원하던 중앙정렬 ㄱㄱ*/
+  text-align: center;
 }
 #header h1 a {
   /*inline과 다르게 너비,높이,마진,패딩값 모두 적용 가능*/
@@ -163,7 +165,8 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
 #aside {
   float: left;
   width: 21.296296296296296%;
-  padding: 75px 0 32px;
+  /*오른쪽 검색 버튼이랑 높낮이 맞춰줌 원래 75px*/
+  padding: 23px 0 32px;
 }
 /*Dom 조작해서 메뉴 창 열고 닫기?*/
 #aside .close {
@@ -203,6 +206,12 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
   margin-top: 38px;
   border-top: 1px solid #eee;
   padding-top: 46px;
+}
+/*공지 & 전체 방문자 경계*/
+.sidebar .sidebar-3 {
+  margin-top: 38px;
+  border-top: 1px solid #eee;
+  padding-top: 25px;
 }
 /*메뉴 내 카테고리 디자인*/
 .sidebar .category {
@@ -310,7 +319,7 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
 	margin-bottom: 46px;
 }
 .sidebar .count h2 {
-	margin-bottom: 3px;
+	margin-bottom: 15px;
 }
 .sidebar .count h2:before {
 	content: "";
@@ -318,7 +327,7 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
 	width: 17px;
 	height: 1px;
 	margin-bottom: 18px;
-	background-color: #555;
+	/* background-color: #555; */
 }
 .sidebar .count p {
 	margin-bottom: 6px;
@@ -357,15 +366,16 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
   text-indent: -999em;
   background-color: aquamarine;
 }
-.sidebar .social-channel ul li.youtube a {
+.sidebar .social-channel ul li .youtube a {
 	background-position-x: -50px;
 }
-.sidebar .social-channel ul li.instagram a {
+.sidebar .social-channel ul li .instagram a {
 	background-position-x: -100px;
 }
-.sidebar .social-channel ul li.twitter a {
+.sidebar .social-channel ul li .twitter a {
 	background-position-x: -150px;
 }
+
 
 
 
