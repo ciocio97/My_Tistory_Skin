@@ -162,20 +162,43 @@ header, footer, section, article, aside_btn, aside, nav, hgroup, details, menu, 
 
 /*메뉴*/
 /*메뉴*/
-#aside_btn {
+#aside_total {
   float: left;
-  width: 21.296296296296296%;
   /*오른쪽 검색 버튼이랑 높낮이 맞춰줌 원래 75px*/
-  padding: 23px 0 32px;
+  padding: 4px 0;
 }
-#aside_btn .util-1 {
+/*메뉴 창 열고 닫기*/
+#menu-btn {
+  width: 0px;
+  height: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+.menu-btn {
+  background-color: blue;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.menu-btn .on-off {
+  padding: 12px;
+}
+.menu-contents .sidebar{
+  visibility: hidden;
+  /*position:absolute 줬기에 display없이도 
+    visibility 만으로 적용가능 짱짱*/
   position: absolute;
-  top: 24px;
-  left: 0;
 }
-/*Dom 조작해서 메뉴 창 열고 닫기?*/
-#aside_btn .close {
-  display: none;
+
+#menu-btn:checked ~ .menu-contents .sidebar {
+  visibility: visible;
+  position: absolute;
+  /* x 버튼이 생기면 추가하기 top: 0; */
+  width: 250px;
+  height: 100vh;
+  transform: translate(0,0);
+  transition: transform 300ms cubic-beizer(0.4, 0, 0.2, 1);
+  background-color: rgba(250, 250, 250, 0.568);
 }
 /*메뉴 내 글씨 디자인*/
 .sidebar h2 {
@@ -485,34 +508,3 @@ aside {
   margin-top: 7em;
   background-color: #567957;
 } */
-
-#test {
-  width: 0px;
-  height: 0px;
-  padding: 0px;
-  margin: 0px;
-}
-
-.test .g{
-  visibility: hidden;
-}
-
-#test:checked ~ .test .g{
-  background-color: pink;
-  visibility: visible;
-}
-
-#menu-btn {
-  width: 0px;
-  height: 0px;
-  padding: 0px;
-  margin: 0px;
-}
-
-.menu-contents .sidebar{
-  visibility: hidden;
-}
-
-#menu-btn:checked ~ .menu-contents .sidebar {
-  visibility: visible;
-}
