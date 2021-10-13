@@ -6,7 +6,7 @@
  * 01. Web Font
  *
  * 
- * 08. Aside(sidebar)
+ * 08. Aside_btn(sidebar)
  *
 */
 
@@ -37,7 +37,7 @@ div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, 
 	margin: 0;
 	padding: 0;
 }
-header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption {
+header, footer, section, article, aside_btn, aside, nav, hgroup, details, menu, figure, figcaption {
 	display: block;
 }
 
@@ -162,14 +162,19 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
 
 /*메뉴*/
 /*메뉴*/
-#aside {
+#aside_btn {
   float: left;
   width: 21.296296296296296%;
   /*오른쪽 검색 버튼이랑 높낮이 맞춰줌 원래 75px*/
   padding: 23px 0 32px;
 }
+#aside_btn .util-1 {
+  position: absolute;
+  top: 24px;
+  left: 0;
+}
 /*Dom 조작해서 메뉴 창 열고 닫기?*/
-#aside .close {
+#aside_btn .close {
   display: none;
 }
 /*메뉴 내 글씨 디자인*/
@@ -191,7 +196,7 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
 .sidebar ul li a:hover {
   color: #333;
 }
-.sidebar .menu .my-menu {
+.sidebar .my-menu {
   display: flex;
   justify-content: space-evenly;
 }
@@ -480,3 +485,19 @@ aside {
   margin-top: 7em;
   background-color: #567957;
 } */
+
+#test {
+  width: 0px;
+  height: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.test .g{
+  visibility: hidden;
+}
+
+#test:checked ~ .test .g{
+  background-color: pink;
+  visibility: visible;
+}
