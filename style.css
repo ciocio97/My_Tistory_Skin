@@ -501,3 +501,18 @@ aside {
   background-color: pink;
   visibility: visible;
 }
+
+#menu-btn {
+  width: 0px;
+  height: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.menu-contents .sidebar{
+  visibility: hidden;
+}
+
+#menu-btn:checked ~ .menu-contents .sidebar {
+  visibility: visible;
+}
