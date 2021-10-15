@@ -167,6 +167,7 @@ header, footer, section, article, aside_btn, aside, nav, hgroup, details, menu, 
 .menu {
   position: absolute;
   display: flex;
+  padding: 31px 0;
 }
 /*메뉴 디자인*/
 .menu-contents .sidebar {
