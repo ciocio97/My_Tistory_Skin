@@ -18,87 +18,98 @@
           <div class="inner">
 
 
-            <aside id="aside_btn" class="sidebar_btn">
+            <aside id="aside_total" class="sidebar_total">
               <div class="menu">
-                <div class="util-1">
-                  <input type="checkbox" id="menu-btn">
-                  <div class="menu-contents">
-                    <label class="on-off" for="menu-btn">메뉴</label>
-                  
-                    <div id="aside" class="sidebar">
-                      <nav class="my-menu">
-                      
-                        <li><a href="[##_owner_url_##]">관리</a></li>
-                        <li><a href="[##_owner_url_##]/entry/post ">글쓰기</a></li>
-                        <li class="login"><a href="#">로그인</a></li>
-                        <li class="logout"><a href="#">로그아웃</a></li>
-                    
-                      </nav>
-        
-                      <div class="sidebar-1">
-                        <s_sidebar>
-                          <s_sidebar_element>
-                            <!-- 카테고리 -->
-                            <nav class="category">
-                              [##_category_list_##]
-                            </nav>
-                          </s_sidebar_element>
-                        </s_sidebar>
-                      </div>
 
-                      <div class="sidebar-2">
-                        <s_sidebar>
-                          <s_sidebar_element>
-                            <!-- 공지사항 -->
-                            <s_rct_notice>
-                              <div class="notice">
-                                <h2>공지사항</h2>
-                                <ul>
-                                  <s_rct_notice_rep>
-                                    <li><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a></li>
-                                  </s_rct_notice_rep>
-                                </ul>
-                              </div>
-                            </s_rct_notice>
-                          </s_sidebar_element>
-                        </s_sidebar>
-                      </div>
+                <div class="menu-btn" onclick="menuBTN()">
+                  <a href="#"></a>
+                    <span class="bar-1"></span>
+                    <span class="bar-2"></span>
+                    <span class="bar-3"></span>
+                </div>
+              
+                <!-- <input type="checkbox" id="menu-btn"> -->
+                <div class="menu-contents">
+                  <!-- <div class="menu-btn">
+                    <label class="on-off" for="menu-btn">=</label>
+                  </div> -->
 
-                      <div class="sidebar-3">
-                        <s_sidebar>
-                          <s_sidebar_element>
-                            <!-- 전체 방문자 -->
-                            <div class="count">
-                              <h2>전체 방문자</h2>
-                              <p class="total">[##_count_total_##]</p>
-                              <p>Today : [##_count_today_##]</p>
-                              <p>Yesterday : [##_count_yesterday_##]</p>
-                            </div>
-                          </s_sidebar_element>
-                        </s_sidebar>
-                      </div>
+                  <div id="aside" class="sidebar">
 
-                      <div class="sidebar-4">
-                        <s_sidebar>
-                          <s_sidebar_element>
-                            <!-- 소셜 채널 -->
-                            <div class="social-channel">
+                    <nav class="my-menu">
+                      <li><a href="[##_owner_url_##]">관리</a></li>
+                      <li><a href="[##_owner_url_##]/entry/post ">글쓰기</a></li>
+                      <li class="login"><a href="#">로그인</a></li>
+                      <li class="logout"><a href="#">로그아웃</a></li>
+                    </nav>
+      
+                    <div class="sidebar-1">
+                      <s_sidebar>
+                        <s_sidebar_element>
+                          <!-- 카테고리 -->
+                          <nav class="category">
+                            [##_category_list_##]
+                          </nav>
+                        </s_sidebar_element>
+                      </s_sidebar>
+                    </div>
+
+                    <div class="sidebar-2">
+                      <s_sidebar>
+                        <s_sidebar_element>
+                          <!-- 공지사항 -->
+                          <s_rct_notice>
+                            <div class="notice">
+                              <h2>공지사항</h2>
                               <ul>
-                                <s_if_var_facebook-link><li class="facebook"><a href="[##_var_facebook-link_##]">페이스북</a></li></s_if_var_facebook-link>
-                                <s_if_var_instagram-link><li class="instagram"><a href="[##_var_instagram-link_##]">인스타그램</a></li></s_if_var_instagram-link>
-                                <s_if_var_twitter-link><li class="twitter"><a href="[##_var_twitter-link_##]">트위터</a></li></s_if_var_twitter-link>
-                                <s_if_var_youtube-link><li class="youtube"><a href="[##_var_youtube-link_##]">유투브</a></li></s_if_var_youtube-link>
+                                <s_rct_notice_rep>
+                                  <li><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a></li>
+                                </s_rct_notice_rep>
                               </ul>
                             </div>
-                          </s_sidebar_element>
-                        </s_sidebar>
-                      </div>
+                          </s_rct_notice>
+                        </s_sidebar_element>
+                      </s_sidebar>
+                    </div>
+
+                    <div class="sidebar-3">
+                      <s_sidebar>
+                        <s_sidebar_element>
+                          <!-- 전체 방문자 -->
+                          <div class="count">
+                            <h2>전체 방문자</h2>
+                            <p class="total">[##_count_total_##]</p>
+                            <p>Today : [##_count_today_##]</p>
+                            <p>Yesterday : [##_count_yesterday_##]</p>
+                          </div>
+                        </s_sidebar_element>
+                      </s_sidebar>
+                    </div>
+
+                    <div class="sidebar-4">
+                      <s_sidebar>
+                        <s_sidebar_element>
+                          <!-- 소셜 채널 -->
+                          <div class="social-channel">
+                            <ul>
+                              <s_if_var_facebook-link><li class="facebook"><a href="[##_var_facebook-link_##]">페이스북</a></li></s_if_var_facebook-link>
+                              <s_if_var_instagram-link><li class="instagram"><a href="[##_var_instagram-link_##]">인스타그램</a></li></s_if_var_instagram-link>
+                              <s_if_var_twitter-link><li class="twitter"><a href="[##_var_twitter-link_##]">트위터</a></li></s_if_var_twitter-link>
+                              <s_if_var_youtube-link><li class="youtube"><a href="[##_var_youtube-link_##]">유투브</a></li></s_if_var_youtube-link>
+                            </ul>
+                          </div>
+                        </s_sidebar_element>
+                      </s_sidebar>
                     </div>
                   </div>
-                  
-
-
                 </div>
+
+
+                  
+                
+
+                
+                
               </div>
               
             </aside>
@@ -106,7 +117,7 @@
             <h1>
               <a href="[##_blog_link_##]">
                 <s_if_var_logo>
-                  <img src="[##_var_logo_##]" alt="[##_title_##]">
+                  <!-- <img src="[##_var_logo_##]" alt="[##_title_##]"> -->
                 </s_if_var_logo>
                 <s_not_var_logo>
                   <!--[##_title_##]-->
