@@ -101,7 +101,7 @@ header, footer, section, article, aside_btn, aside, nav, hgroup, details, menu, 
   content: "";
   position: absolute;
   top: 0;
-  right: 0;
+  right: 30;
   z-index: 20;
   width: 32px;
   height: 32px;
@@ -160,46 +160,58 @@ header, footer, section, article, aside_btn, aside, nav, hgroup, details, menu, 
 }
 #header .util .search.on button {border-color: transparent;}
 
+
+/*aside_total 생략*/
 /*메뉴*/
 /*메뉴*/
-#aside_total {
-  float: left;
-  /*오른쪽 검색 버튼이랑 높낮이 맞춰줌 원래 75px*/
-  padding: 4px 0;
-}
-/*메뉴 창 열고 닫기*/
-#menu-btn {
-  width: 0px;
-  height: 0px;
-  padding: 0px;
-  margin: 0px;
-}
-.menu-btn {
-  background-color: blue;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-}
-.menu-btn .on-off {
-  padding: 12px;
-}
-.menu-contents .sidebar{
-  visibility: hidden;
-  /*position:absolute 줬기에 display없이도 
-    visibility 만으로 적용가능 짱짱*/
+.menu {
   position: absolute;
+  display: flex;
+}
+/*메뉴 디자인*/
+.menu-contents .sidebar {
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+}
+/*메뉴 열고 닫을 때 디자인 변경*/
+.menu.after {
+  width: 330px;
+  height: 100vh;
+  background-color: darkolivegreen;
+  padding: 31px 0;
+}
+.menu-contents .sidebar.after {
+  visibility: visible;
+}
+/*메뉴 버튼 디자인*/
+.menu-btn {
+  cursor: pointer;
+}
+.menu-btn span {
+  display: block;
+  width: 22px;
+  height: 1px;
+  margin-bottom: 7px;
+  background: #7d7d7d;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+/*메뉴 버튼 열고 닫을 때 디자인 변경*/
+.menu-btn.after .bar-1 {
+  transform: translate(290px, 8px) rotate(45deg);
+  -webkit-transform: translate(290px, 8px) rotate(45deg);
+  -ms-transform: translate(290px, 8px) rotate(45deg);
+}
+.menu-btn.after .bar-2 {
+  visibility: hidden;
+  transform: translate(290px, 0);
+}
+.menu-btn.after .bar-3 {
+  transform: translate(290px, -8px) rotate(-45deg);
 }
 
-#menu-btn:checked ~ .menu-contents .sidebar {
-  visibility: visible;
-  position: absolute;
-  /* x 버튼이 생기면 추가하기 top: 0; */
-  width: 250px;
-  height: 100vh;
-  transform: translate(0,0);
-  transition: transform 300ms cubic-beizer(0.4, 0, 0.2, 1);
-  background-color: rgba(250, 250, 250, 0.568);
-}
 /*메뉴 내 글씨 디자인*/
 .sidebar h2 {
   margin-bottom: 7px;
