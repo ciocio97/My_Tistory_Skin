@@ -179,7 +179,7 @@ header, footer, section, article, aside_btn, aside, nav, hgroup, details, menu, 
 .menu.after {
   width: 330px;
   height: 100vh;
-  background-color: darkolivegreen;
+  background-color: rgba(110, 133, 100, 0.5);
   padding: 31px 0;
 }
 .menu-contents .sidebar.after {
@@ -194,23 +194,26 @@ header, footer, section, article, aside_btn, aside, nav, hgroup, details, menu, 
   width: 22px;
   height: 1px;
   margin-bottom: 7px;
-  background: #7d7d7d;
-  transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
+  background: rgb(75, 75, 75);
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
 /*메뉴 버튼 열고 닫을 때 디자인 변경*/
 .menu-btn.after .bar-1 {
-  transform: translate(290px, 8px) rotate(45deg);
-  -webkit-transform: translate(290px, 8px) rotate(45deg);
-  -ms-transform: translate(290px, 8px) rotate(45deg);
+  background: #eee;
+  transform: translate(280px, 8px) rotate(45deg);
+  -webkit-transform: translate(280px, 8px) rotate(45deg);
+  -ms-transform: translate(280px, 8px) rotate(45deg);
 }
 .menu-btn.after .bar-2 {
+  background: #eee;
   visibility: hidden;
-  transform: translate(290px, 0);
+  transform: translate(280px, 0);
 }
 .menu-btn.after .bar-3 {
-  transform: translate(290px, -8px) rotate(-45deg);
+  background: #eee;
+  transform: translate(280px, -8px) rotate(-45deg);
 }
 
 /*메뉴 내 글씨 디자인*/
@@ -232,9 +235,23 @@ header, footer, section, article, aside_btn, aside, nav, hgroup, details, menu, 
 .sidebar ul li a:hover {
   color: #333;
 }
+/*메뉴 관리, 글쓰기, 로그인, 로그아웃*/
 .sidebar .my-menu {
   display: flex;
-  justify-content: space-evenly;
+}
+.sidebar .my-menu li {
+  list-style: none;
+  padding-right: 10px;
+}
+.sidebar .my-menu li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  text-indent: -999em;
+  /* text-align: center;
+  text-decoration: none; */
 }
 /*메뉴 관리창 & 카테고리 경계*/
 .sidebar .sidebar-1 {
@@ -315,6 +332,9 @@ header, footer, section, article, aside_btn, aside, nav, hgroup, details, menu, 
 .sidebar .notice {
 	margin-bottom: 37px;
 }
+.sidebar .notice ul li {
+  list-style: none;
+}
 /*페이스북, 인스타 등등 뭔지 모르겠음*/
 /*HTML에서는 주석처리로 막아놓음*/
 .sidebar .social-list {
@@ -388,19 +408,19 @@ header, footer, section, article, aside_btn, aside, nav, hgroup, details, menu, 
 .sidebar .social-channel ul {
   overflow: hidden;
   width: 100%;
+  display: flex;
 }
 .sidebar .social-channel ul li {
-  float: left;
-  margin-left: 10px;
-  padding: 0;
+  list-style: none;
+  padding-right: 10px;
 }
 .sidebar .social-channel ul li:first-child {
 	margin-left: 0;
 }
 .sidebar .social-channel ul li a {
   display: block;
-  width: 34px;
-  height: 34px;
+  width: 40px;
+  height: 40px;
   border: 1px solid #eee;
 	border-radius: 50%;
   /*list의 점만 남고 text가 사라짐*/
