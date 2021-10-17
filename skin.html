@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>개발이 하고 싶니 ? 디자이너가 되고 싶어 ?</title>
     <script src="images/script.js" defer></script>
@@ -37,10 +38,10 @@
                   <div id="aside" class="sidebar">
 
                     <nav class="my-menu">
-                      <li><a href="[##_owner_url_##]">관리</a></li>
-                      <li><a href="[##_owner_url_##]/entry/post ">글쓰기</a></li>
-                      <li class="login"><a href="#">로그인</a></li>
-                      <li class="logout"><a href="#">로그아웃</a></li>
+                      <li><a href="[##_owner_url_##]">SET</a></li>
+                      <li><a href="[##_owner_url_##]/entry/post ">POST</a></li>
+                      <li class="login"><a href="#">IN</a></li>
+                      <li class="logout"><a href="#">OUT</a></li>
                     </nav>
       
                     <div class="sidebar-1">
@@ -48,7 +49,38 @@
                         <s_sidebar_element>
                           <!-- 카테고리 -->
                           <nav class="category">
+                            <h2>카테고리</h2>
                             [##_category_list_##]
+                            <!--예시 시작
+                            <ul>
+                              <li><a>자바스크립트</a></li>
+                              <li>
+                                <a>자바스크립트</a>
+                                <ul>
+                                  <li><a>자바스크립트</a></li>
+                                  <li><a>자바스크립트</a></li>
+                                  <li><a>자바스크립트</a></li>
+                                  <li>
+                                    <a>자바스크립트</a>
+                                    <ul>
+                                      <li><a>자바스크립트</a></li>
+                                      <li><a>자바스크립트</a></li>
+                                      <li><a>자바스크립트</a></li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <a>자바스크립트</a>
+                                <ul>
+                                  <li><a>자바스크립트</a></li>
+                                  <li><a>자바스크립트</a></li>
+                                  <li><a>자바스크립트</a></li>
+                                  <li><a>자바스크립트</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                            예시 끝-->
                           </nav>
                         </s_sidebar_element>
                       </s_sidebar>
@@ -92,10 +124,10 @@
                           <!-- 소셜 채널 -->
                           <div class="social-channel">
                             <ul>
-                              <s_if_var_facebook-link><li class="facebook"><a href="[##_var_facebook-link_##]">페이스북</a></li></s_if_var_facebook-link>
-                              <s_if_var_instagram-link><li class="instagram"><a href="[##_var_instagram-link_##]">인스타그램</a></li></s_if_var_instagram-link>
-                              <s_if_var_twitter-link><li class="twitter"><a href="[##_var_twitter-link_##]">트위터</a></li></s_if_var_twitter-link>
-                              <s_if_var_youtube-link><li class="youtube"><a href="[##_var_youtube-link_##]">유투브</a></li></s_if_var_youtube-link>
+                              <s_if_var_facebook-link><li class="facebook"><a href="[##_var_facebook-link_##]"><i class="fab fa-facebook-f"></i></i></a></li></s_if_var_facebook-link>
+                              <s_if_var_instagram-link><li class="instagram"><a href="[##_var_instagram-link_##]"><i class="fab fa-instagram"></i></a></li></s_if_var_instagram-link>
+                              <s_if_var_twitter-link><li class="twitter"><a href="[##_var_twitter-link_##]"><i class="fab fa-twitter"></i></a></li></s_if_var_twitter-link>
+                              <s_if_var_youtube-link><li class="youtube"><a href="[##_var_youtube-link_##]"><i class="fab fa-youtube"></i></a></li></s_if_var_youtube-link>
                             </ul>
                           </div>
                         </s_sidebar_element>
