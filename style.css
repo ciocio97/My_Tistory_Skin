@@ -172,8 +172,8 @@ header, footer, section, article, aside_btn, aside, nav, hgroup, details, menu, 
 /*메뉴 디자인*/
 .menu-contents .sidebar {
   visibility: hidden;
-  transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
 }
 /*메뉴 열고 닫을 때 디자인 변경*/
 .menu.after {
@@ -181,12 +181,30 @@ header, footer, section, article, aside_btn, aside, nav, hgroup, details, menu, 
   height: 100vh;
   background-color: rgba(110, 133, 100, 0.5);
   padding: 31px 0;
+  /*fade-in animation*/
+  animation: fade-in 1s;
+  animation-iteration-count: 1;
+  -webkit-animation: fade-in 1s;
+  -moz-animation: fade-in 1s;
+  -o-animation: fade-in 1s;
+}
+@keyframes fade-in {
+  from { opacity: 0; } to { opacity: 1; }
+}
+@-webkit-keyframes fade-in {
+  from { opacity: 0; } to { opacity: 1; }
+}
+@-moz-keyframes fade-in {
+  from { opacity: 0; } to { opacity: 1; }
+}
+@-o-keyframes fade-in {
+  from { opacity: 0; } to { opacity: 1; }
 }
 .menu-contents .sidebar.after {
   visibility: visible;
 }
 /*메뉴 버튼 디자인*/
-.menu-btn {
+.menu-btn, .menu-btn a{
   cursor: pointer;
 }
 .menu-btn span {
