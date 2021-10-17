@@ -165,28 +165,32 @@ header, footer, section, article, aside_btn, aside, nav, hgroup, details, menu, 
 /*메뉴*/
 /*메뉴*/
 .menu {
+  height: 100vh;
   position: absolute;
   display: flex;
   padding: 31px 0;
 }
-/*메뉴 디자인*/
-.menu-contents .sidebar {
-  visibility: hidden;
-  transition: all 0.1s ease-in-out;
-  -webkit-transition: all 0.1s ease-in-out;
-}
 /*메뉴 열고 닫을 때 디자인 변경*/
 .menu.after {
   width: 330px;
-  height: 100vh;
+  /*height을 안적었는데 잘 나온다고?*/
   background-color: rgba(110, 133, 100, 0.5);
-  padding: 31px 0;
+  padding: 31px 0; 
+}
+/*메뉴 디자인*/
+.menu-contents .sidebar {
+  visibility: hidden;
+  /* transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out; */
+}
+.menu-contents .sidebar.after {
+  visibility: visible;
   /*fade-in animation*/
-  animation: fade-in 1s;
+  animation: fade-in 0.5s;
   animation-iteration-count: 1;
-  -webkit-animation: fade-in 1s;
-  -moz-animation: fade-in 1s;
-  -o-animation: fade-in 1s;
+  -webkit-animation: fade-in 0.5s;
+  -moz-animation: fade-in 0.5s;
+  -o-animation: fade-in 0.5s;
 }
 @keyframes fade-in {
   from { opacity: 0; } to { opacity: 1; }
@@ -199,9 +203,6 @@ header, footer, section, article, aside_btn, aside, nav, hgroup, details, menu, 
 }
 @-o-keyframes fade-in {
   from { opacity: 0; } to { opacity: 1; }
-}
-.menu-contents .sidebar.after {
-  visibility: visible;
 }
 /*메뉴 버튼 디자인*/
 .menu-btn, .menu-btn a{
@@ -245,13 +246,13 @@ header, footer, section, article, aside_btn, aside, nav, hgroup, details, menu, 
   padding: 4px 0 5px;
   font-size: 0.8125em;
   line-height: 1.25em;
-  color: #777;
+  color: #eee;
 }
 .sidebar ul li a {
-  color: #777;
+  color: #eee;
 }
 .sidebar ul li a:hover {
-  color: #333;
+  color: #777;
 }
 /*메뉴 관리, 글쓰기, 로그인, 로그아웃*/
 .sidebar .my-menu {
@@ -262,14 +263,21 @@ header, footer, section, article, aside_btn, aside, nav, hgroup, details, menu, 
   padding-right: 10px;
 }
 .sidebar .my-menu li a {
-  display: block;
   width: 40px;
   height: 40px;
-  border: 1px solid #eee;
   border-radius: 50%;
-  text-indent: -999em;
-  /* text-align: center;
-  text-decoration: none; */
+  border: 1px solid #eee;
+  color: #eee;
+  font-size: 15px;
+  text-decoration: none;
+  text-align: center;
+  /*텍스트 '수직' 중앙 정렬*/
+  display: table-cell;
+  vertical-align: middle;
+}
+.sidebar .my-menu li a:hover {
+  color: #777;
+  border: 1px solid #777;
 }
 /*메뉴 관리창 & 카테고리 경계*/
 .sidebar .sidebar-1 {
@@ -289,42 +297,54 @@ header, footer, section, article, aside_btn, aside, nav, hgroup, details, menu, 
   border-top: 1px solid #eee;
   padding-top: 25px;
 }
+/* .sidebar .sidebar-4 {
+  margin-top: 38px;
+  border-top: 1px solid #eee;
+  padding-top: 25px;
+} */
 /*메뉴 내 카테고리 디자인*/
 .sidebar .category {
   margin-bottom: 36px;
+}
+.sidebar .category h2 {
+  margin-bottom: 10px;
 }
 /*시작*/
 .sidebar .category ul li {
   padding: 0;
   font-size: 0.875em;
   font-weight: 600;
+  list-style: none;
 }
 .sidebar .category ul li a {
-  color: #555;
+  color: #eee;
 }
 .sidebar .category ul li a:hover {
-  color: #333;
+  color: #777;
 }
 /*중간*/
 .sidebar .category ul li ul {
-	padding-top: 8px;
+  margin-top: 10px;
+	padding-left: 20px;
 }
 .sidebar .category ul li ul li {
-	padding: 6px 0 7px;
+	padding: 2px;
 	font-weight: 400;
 	font-size: 1em;
+  list-style: none;
 }
 /*끝*/
 .sidebar .category ul li ul li ul {
 	overflow: hidden;
-	margin-bottom: -4px;
-	padding-top: 6px;
+  margin-top: 10px;
+	margin-bottom: 10px;
 }
 .sidebar .category ul li ul li ul li {
 	position: relative;
-	padding: 3px 0 3px 9px;
+  padding: 3px 0 3px 7px;
 	/* border-left: 2px solid #eee; */
 	font-size: 0.8125rem;
+  list-style: none;
 }
 .sidebar .category ul li ul li ul li:before {
 	/*대체 컨텐츠*/
@@ -350,8 +370,16 @@ header, footer, section, article, aside_btn, aside, nav, hgroup, details, menu, 
 .sidebar .notice {
 	margin-bottom: 37px;
 }
+.sidebar .notice h2 {
+  margin-bottom: 10px;
+}
 .sidebar .notice ul li {
   list-style: none;
+  color: #eee;
+}
+.sidebar .notice ul li a {
+  text-decoration: none;
+  color: #eee;
 }
 /*페이스북, 인스타 등등 뭔지 모르겠음*/
 /*HTML에서는 주석처리로 막아놓음*/
@@ -411,13 +439,13 @@ header, footer, section, article, aside_btn, aside, nav, hgroup, details, menu, 
 .sidebar .count p {
 	margin-bottom: 6px;
 	font-size: 0.8125em;
-	color: #777;
+	color: #eee;
 }
 .sidebar .count .total {
 	margin-bottom: 12px;
 	font-weight: 700;
 	font-size: 1.875em;
-	color: #555;
+	color: #eee;
 }
 /*페북, 인스타, 트위터, 유투브*/
 .sidebar .social-channel {
@@ -436,14 +464,19 @@ header, footer, section, article, aside_btn, aside, nav, hgroup, details, menu, 
 	margin-left: 0;
 }
 .sidebar .social-channel ul li a {
-  display: block;
   width: 40px;
   height: 40px;
   border: 1px solid #eee;
 	border-radius: 50%;
+  font-size: 25px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
   /*list의 점만 남고 text가 사라짐*/
-  text-indent: -999em;
-  background-color: aquamarine;
+  /* text-indent: -999em; */
+}
+.sidebar .social-channel ul li a:hover {
+  border: 1px solid #777;
 }
 .sidebar .social-channel ul li .youtube a {
 	background-position-x: -50px;
