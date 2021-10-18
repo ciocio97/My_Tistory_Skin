@@ -45,6 +45,7 @@ header, footer, section, article, aside_btn, aside, nav, hgroup, details, menu, 
 #header {
   border-bottom: 1px solid transparent;
 }
+/*inner class 가 여러개입니다 잘 기억해두십시오*/
 #header .inner {
   position:relative;
   max-width: 1500px;
@@ -268,12 +269,18 @@ header, footer, section, article, aside_btn, aside, nav, hgroup, details, menu, 
   border-radius: 50%;
   border: 1px solid #eee;
   color: #eee;
-  font-size: 15px;
   text-decoration: none;
   text-align: center;
   /*텍스트 '수직' 중앙 정렬*/
   display: table-cell;
   vertical-align: middle;
+}
+.sidebar .my-menu .setting, .sidebar .my-menu .writing {
+  font-size: 20px;
+}
+.sidebar .my-menu .login, .sidebar .my-menu .logout {
+  font-size: 15px;
+  font-weight: 700;
 }
 .sidebar .my-menu li a:hover {
   color: #777;
