@@ -6,7 +6,7 @@
  * 01. Web Font
  *
  * 
- * 08. Aside_btn(sidebar)
+ * 08. Aside
  *
 */
 
@@ -37,11 +37,11 @@ div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, 
 	margin: 0;
 	padding: 0;
 }
-header, footer, section, article, aside_btn, aside, nav, hgroup, details, menu, figure, figcaption {
+header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption {
 	display: block;
 }
 
-/* Layout Selector */
+/* 01 Layout Selector */
 #header {
   border-bottom: 1px solid transparent;
 }
@@ -160,6 +160,54 @@ header, footer, section, article, aside_btn, aside, nav, hgroup, details, menu, 
   border-radius: 32px;
 }
 #header .util .search.on button {border-color: transparent;}
+
+/* 02 Layout Selector */
+#container {
+  position: relative;
+}
+#container .content-wrap {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: pink;
+}
+/*before 와 after 도대체 언제 쓰이는가??*/
+#container .content-wrap:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 10;
+  width: 1px;
+  height: 100%;
+  margin-left: 390px;
+  background-color: #eee;
+}
+#container .content-wrap:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+#content {
+  float: left;
+  width: 79.79%;
+	padding: 72px 0 60px;
+	box-sizing: border-box;
+  background-color: #969696;
+}
+#content > .inner:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+
+
+
 
 
 /*aside_total 생략*/
@@ -494,6 +542,90 @@ header, footer, section, article, aside_btn, aside, nav, hgroup, details, menu, 
 .sidebar .social-channel ul li .twitter a {
 	background-position-x: -150px;
 }
+
+/* blog 본문 디자인 시작 */
+
+/*post-item*/
+.post-item {
+  float: left;
+  width: 31.081081081081081%;
+	margin: 0 0 58px 3.378378378378378%;
+}
+
+
+
+/*post-cover*/
+.post-cover {
+  position: relative;
+  z-index: 20;
+  display: table;
+  width: 100%;
+  height: 340px;
+  background-color: #cbcbcb;
+  background-position: 50% 50%;
+  background-size: cover;
+  box-sizing: border-box;
+}
+.post-cover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(139, 53, 53, 0.25);
+}
+.post-cover .inner {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+.post-cover .category {
+  display: block;
+  max-width: 1250px;
+  margin: 0 auto 13px;
+  font-size: 0.875em;
+  color: #eee;
+}
+.post-cover h1 {
+  max-width: 1250px;
+  margin: 0 auto 13px;
+  font-size: 2.125em;
+  font-weight: 600;
+  line-height: 1.2352;
+  color: #eee;
+}
+.post-cover a {
+  text-decoration: none;
+  color: #eee;
+}
+.post-cover .meta {
+  display: flex;
+  flex-direction: column;
+  max-width: 1250px;
+  margin: 0 auto;
+  font-size: 0.875em;
+  color: rgba(255,255,255,0.6);
+}
+.post-cover .meta a {
+  color: rgba(255,255,255,0.6);
+}
+.post-cover .meta a:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 3px;
+  height: 3px;
+  margin: 0 8px 0 8px;
+  background-color: rgba(255,255,255,0.6);
+}
+
+
+
+
 
 
 
