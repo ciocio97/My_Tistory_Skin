@@ -190,9 +190,14 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
   height: 0;
   visibility: hidden;
 }
+#container .content-wrap nav {
+  position: fixed;
+  margin-left: 1015px;
+  background-color: blue;
+}
 #content {
   float: left;
-  width: 79.79%;
+  width: 1015px;
 	padding: 72px 0 60px;
 	box-sizing: border-box;
   background-color: #969696;
@@ -738,14 +743,20 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
   font-weight: 700;
 }
 .entry-content p {
-  margin-bottom: 32px;
+  margin-bottom: 2px;
   /*텍스트가 콘텐츠 밖으로 overflow할 때 줄을 바꿀지 안 바꿀지*/
   word-break: break-all;
-  font-size: 0.9em;
+  font-size: 0.96em;
   line-height: 2;
-  color: #555;
-
-  /*img 중앙정렬을 실현하기 위한 ..!*/
+  color: #333;
+}
+.entry-content p span {
+  /*형광펜 표시, 굵은 글씨, 글자 색 변한 부분들 굵게*/
+  padding: 2px 3px 4px;
+  border-radius: 7px;
+}
+.entry-content p.align-img {
+  /*img 중앙정렬을 실현하기 위한 class추가..!*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -770,7 +781,15 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
   /*요소가 공백 문자를 처리하는 법 지정*/
   white-space: pre-wrap;
   word-wrap: break-word;
+  margin: 22px; /*코드 문단 안쪽으로*/
+  padding: 20px 25px 25px;
+  border-radius: 30px;
+  background-color: rgb(165, 121, 121);
+}
+.entry-content pre code {
+  /*일단 코드 내의 자간, 간격 조절 해주긴했는데*/
   font-size: 1.05em;
+  line-height: 2.1;
 }
 .entry-content ul {
   list-style: disc;
@@ -811,6 +830,50 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
 .entry-content img.alignright {
   float: right;
   margin: 0 0 22px 22px;
+}
+.entry-content blockquote {
+  /*인용구*/
+  margin-bottom: 40px;
+  padding: 16px 20px;
+  border-left: 4px solid #e6e6e6;
+}
+.entry-content blockquote p {
+  margin: 5px 0 0;
+}
+.entry-content blockquote p:first-child {
+  margin-top: 0;
+}
+.entry-content table {
+  width: 100%;
+  margin-bottom: 22px;
+  border: 1px solid #eee;
+  /*border-collapse*/
+  /*표 테두리가 분리(separated)될지 상쇄(collapsed)될지 결정*/
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 0.95em;
+  line-height: 1.57;
+  color: #333;
+}
+.entry-content table thead th {
+  padding: 11px 0;
+  border-left: 1px solid #eee;
+}
+.entry-content table tbody td {
+  padding: 11px 0;
+  border-left: 1px solid #eee;
+  border-top: 1px solid #eee;
+}
+.entry-content input {
+  /*이 input은 언제 쓰이는거임*/
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid #eee;
+  font-size: 0.8em;
+  line-height: 1.25;
+  color: #333;
+  box-sizing: border-box;
+  vertical-align: middle;
 }
 
 
