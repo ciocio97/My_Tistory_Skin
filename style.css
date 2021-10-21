@@ -43,6 +43,13 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
 
 /* 01 Layout Selector */
 #header {
+  position: fixed; /*fixed는 display를 다 무시하는건가?*/
+  top: 0;
+  left: 0;
+  right: 0;
+  /*500이 최선인가?? 임의 설정값*/
+  z-index: 500;
+  background-color: rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid transparent;
 }
 /*inner class 가 여러개입니다 잘 기억해두십시오*/
@@ -169,10 +176,10 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
   max-width: 1250px;
   margin: 0 auto;
   padding: 0;
-  background-color: pink;
+  background-color: white;
 }
 /*before 와 after 도대체 언제 쓰이는가??*/
-#container .content-wrap:before {
+/* #container .content-wrap:before {
   content: "";
   position: absolute;
   top: 0;
@@ -189,18 +196,47 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
   display: block;
   height: 0;
   visibility: hidden;
-}
+} */
+/*나의 nav 꾸미기*/
 #container .content-wrap nav {
   position: fixed;
+  width: 235px;
   margin-left: 1015px;
-  background-color: blue;
+  word-break: break-word;
+  background-color: rgba(110, 133, 100, 0.5);
+  border: 3px solid white;
+  border-radius: 20px;
+}
+#container .content-wrap nav ul {
+  padding: 15px 10px 3px;
+  font-size: 0.8em;
+}
+#container .content-wrap nav ul li {
+  line-height: 2.2;
+  list-style: none;
+  padding-left: 5px;
+}
+#container .content-wrap nav ul .space {
+  padding: 10px;
+}
+#container .content-wrap nav ul li.nav-H1 {
+
+}
+#container .content-wrap nav ul li.nav-H2 {
+  padding-left: 20px;
+}
+#container .content-wrap nav ul li.nav-H3 {
+  padding-left: 40px;
+}
+#container .content-wrap nav ul li.nav-H4 {
+  padding-left: 60px;
 }
 #content {
   float: left;
   width: 1015px;
-	padding: 72px 0 60px;
+	padding: 72px 20px 60px;
 	box-sizing: border-box;
-  background-color: #969696;
+  background-color: white;
 }
 #content > .inner:after {
   content: "";
@@ -223,6 +259,7 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
   position: absolute;
   display: flex;
   padding: 31px 0;
+  margin-left: 30px;
 }
 /*메뉴 열고 닫을 때 디자인 변경*/
 .menu.after {
@@ -781,10 +818,10 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
   /*요소가 공백 문자를 처리하는 법 지정*/
   white-space: pre-wrap;
   word-wrap: break-word;
-  margin: 22px; /*코드 문단 안쪽으로*/
+  margin-right: 11px; /*코드 문단 안쪽으로*/
   padding: 20px 25px 25px;
-  border-radius: 30px;
-  background-color: rgb(165, 121, 121);
+  border-radius: 20px;
+  background-color: rgba(88, 88, 88, 08);
 }
 .entry-content pre code {
   /*일단 코드 내의 자간, 간격 조절 해주긴했는데*/
