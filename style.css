@@ -220,7 +220,7 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
   padding: 10px;
 }
 #container .content-wrap nav ul li.nav-H1 {
-
+  
 }
 #container .content-wrap nav ul li.nav-H2 {
   padding-left: 20px;
@@ -234,7 +234,7 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
 #content {
   float: left;
   width: 1015px;
-	padding: 72px 20px 60px;
+	padding: 72px 30px 60px 0;
 	box-sizing: border-box;
   background-color: white;
 }
@@ -789,7 +789,7 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
 }
 .entry-content p span {
   /*형광펜 표시, 굵은 글씨, 글자 색 변한 부분들 굵게*/
-  padding: 2px 3px 4px;
+  padding: 2px 3px 3px;
   border-radius: 7px;
 }
 .entry-content p.align-img {

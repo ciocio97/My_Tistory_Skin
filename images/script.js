@@ -117,6 +117,15 @@ arrange_list.forEach((p) => {
 
 console.log(nav_ul);
 
+const nav_ul_li = nav_ul.querySelectorAll('li');
+const nav_ul_li_top_location = [...nav_ul_li].map((el) => el.offsetTop);
+console.log(nav_ul_li);
+console.log(nav_ul_li_top_location);
+// for(let el of [...nav_ul_li]){
+//   console.log(el);
+//   console.log(el.offsetTop);
+// }
+
 // arrange_list.forEach((p) => {
 //   for(let item of p){
 
@@ -138,5 +147,11 @@ console.log(nav_ul);
 //     }
 //   }
 // });
+
+window.addEventListener('scroll', function(){
+  if(nav_ul_li_top_location.indexOf(window.pageYOffset) === -1){
+    console.log('here!');
+  }
+});
 
 
