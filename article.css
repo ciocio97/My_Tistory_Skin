@@ -24,7 +24,7 @@
 @import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
 
 /* Type Selector Reset */
-body {
+/* body {
 	-webkit-text-size-adjust: 100%;
 	font-weight: 400;
 	font-family: 'AppleSDGothicNeo', 'Noto Sans KR', sans-serif;
@@ -45,7 +45,7 @@ div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, 
 }
 header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption {
 	display: block;
-}
+} */
 /*여기부터 다시*/
 button, input[type=submit], input[type=reset], input[type=button] {
 	overflow: visible;
@@ -218,7 +218,7 @@ a:active {text-decoration:none;}
 }
 #header .util .search.on button {border-color: transparent;}
 /*#header는 여기부터*/
-#header .util .profile {
+/* #header .util .profile {
 	position: relative;
 	float: left;
 	margin-left: 14px;
@@ -267,7 +267,7 @@ a:active {text-decoration:none;}
 }
 #header .util .menu {
 	display: none;
-}
+} */
 #gnb {
 	height: 66px;
 	overflow-x: auto;
@@ -309,7 +309,8 @@ a:active {text-decoration:none;}
 	height: 4px;
 	background-color: #333;
 }
-#container {
+/*블로그 본문 시작*/
+/* #container {
 	position: relative;
 }
 #container .content-wrap {
@@ -347,10 +348,10 @@ a:active {text-decoration:none;}
 	display: block;
 	height: 0;
 	visibility: hidden;
-}
+} */
 
 /*메뉴 시작*/
-#aside {
+/* #aside {
 	float: right;
 	width: 21.296296296296296%;
 	padding: 75px 0 32px;
@@ -359,7 +360,7 @@ a:active {text-decoration:none;}
 #aside .close,
 #aside .profile {
 	display: none;
-}
+} */
 
 #footer {
 	padding: 38px 0 28px;
@@ -1052,7 +1053,7 @@ a:active {text-decoration:none;}
 	color: rgba(255,255,255,0.6);
 }
 
-.post-cover {
+/* .post-cover {
 	position: relative;
 	z-index: 20;
 	display: table;
@@ -1108,8 +1109,9 @@ a:active {text-decoration:none;}
 }
 .post-cover .meta a {
 	color: rgba(255,255,255,0.6);
-}
-.post-cover .meta a:before,
+} */
+/*by개발디발 & 날짜 사이에 회색 점*/
+/* .post-cover .meta a:before,
 .post-cover .meta span:before {
 	content: "";
 	display: inline-block;
@@ -1121,7 +1123,7 @@ a:active {text-decoration:none;}
 }
 .post-cover .meta span:first-child:before {
 	content: none;
-}
+} */
 
 .post-header {padding-top: 4px;}
 .post-header h1 {
@@ -1141,6 +1143,8 @@ a:active {text-decoration:none;}
 	color: #04beb8;
 }
 
+/*여기부터 하세용*/
+/*도대체 이건 뭘까*/
 .post-item {
 	float: left;
 	width: 31.081081081081081%;
@@ -1556,6 +1560,7 @@ a:active {text-decoration:none;}
 	box-sizing: border-box;
 	vertical-align: middle;
 }
+/*여긴어디죠*/
 .entry-content .entry-content .protected_form {
 	margin-bottom: 40px;
 	padding: 120px 0 200px;
@@ -1891,8 +1896,8 @@ a:active {text-decoration:none;}
 	padding-top: 46px;
 	border-top: 1px solid #eee;
 }
-
-.sidebar .category {
+/**/
+/* .sidebar .category {
 	margin-bottom: 36px;
 }
 .sidebar .category ul li {
@@ -1922,7 +1927,7 @@ a:active {text-decoration:none;}
 .sidebar .category ul li ul li ul li {
 	position: relative;
 	padding: 3px 0 3px 9px;
-	/* border-left: 2px solid #eee; */
+	border-left: 2px solid #eee;
 	font-size: 0.8125rem;
 }
 .sidebar .category ul li ul li ul li:before {
@@ -1944,6 +1949,7 @@ a:active {text-decoration:none;}
 .sidebar .notice {
 	margin-bottom: 37px;
 }
+/*post-list는 안넣었어요*/
 .sidebar .recent-comment {
 	margin-bottom: 36px;
 }
@@ -1992,7 +1998,8 @@ a:active {text-decoration:none;}
 	font-size: 0.75rem;
 	line-height: 1;
 }
-.sidebar .social-list {
+/*social-list는 넣었다*/
+/* .sidebar .social-list {
 	margin-bottom: 46px;
 }
 .sidebar .social-list h2 {
@@ -2029,7 +2036,8 @@ a:active {text-decoration:none;}
 	margin-top: 6px;
 	font-size: 0.75rem;
 	color: #777;
-}
+} */
+/*aside tags는 안넣었다*/
 #aside .tags {
 	margin: 0 0 41px;
 	padding: 0;
@@ -2058,7 +2066,8 @@ a:active {text-decoration:none;}
 #aside .tags a:focus {
 	color: #333;
 }
-.sidebar .count {
+/*count는 넣었다*/
+/* .sidebar .count {
 	margin-bottom: 46px;
 }
 .sidebar .count h2 {
@@ -2082,7 +2091,8 @@ a:active {text-decoration:none;}
 	font-weight: 700;
 	font-size: 1.875em;
 	color: #555;
-}
+} */
+/*social-channel은 넣었다*/
 .sidebar .social-channel {
 	margin-bottom: 48px;
 }
@@ -2216,6 +2226,9 @@ a:active {text-decoration:none;}
 }
 
 /* Option(Color Type & List Type) */
+/*aside와 content가 나란히 있을때는 위치를 서로 변경할 수 있게 만들었다*/
+/*하지만 내 레이아웃에서는 추가적인 변경이 필요없찌 !*/
+/*content고정, menu는 상시 위에 띄워놓을거니까*/
 .layout-aside-left #content {
 	float: right;
 }
@@ -2227,7 +2240,7 @@ a:active {text-decoration:none;}
 .layout-aside-left #container .content-wrap:before {
 	margin-left: -256px;
 }
-
+/*나는 여기부터*/
 .list-type-vertical .post-item {
 	margin-bottom: 38px;
 }
