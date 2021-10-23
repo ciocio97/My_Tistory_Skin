@@ -149,9 +149,17 @@ console.log(nav_ul_li_top_location);
 // });
 
 window.addEventListener('scroll', function(){
-  if(nav_ul_li_top_location.indexOf(window.pageYOffset) === -1){
-    console.log('here!');
-  }
+  const list = nav_ul_li_top_location;
+  const height_body = document.body.offsetHeight;
+  const height = window.scrollY;
+  // for(let i=0; i<list.length; i++){
+  //   if(list[i] <= location && location <= list[i+1]){
+  //     console.log('IM here!!!!!')
+  //   }
+  // }
+  console.log("offsetTop : ", window.offsetTop);
+  console.log("offsetLeft : ", window.offsetLeft);
+  console.log("scrollHeight : ", window.scrollHeight);
 });
 
 
