@@ -29,7 +29,7 @@
 <div id="wrap">
 	<header id="header">
 		<div class="inner">
-			<h1>
+			<!-- <h1>
 				<a href="[##_blog_link_##]">
 					<s_if_var_logo>
 						<img src="[##_var_logo_##]" alt="[##_title_##]">
@@ -38,15 +38,15 @@
 						[##_title_##]
 					</s_not_var_logo>
 				</a>
-			</h1>
+			</h1> -->
 			<div class="util">
-				<div class="search">
+				<!-- <div class="search">
 					<s_search>
 						<input type="text" name="[##_search_name_##]" value="[##_search_text_##]" placeholder="검색내용을 입력하세요." onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }">
 						<button type="submit" onclick="[##_search_onclick_submit_##]">검색</button>
 					</s_search>
-				</div>
-				<div class="profile">
+				</div> -->
+				<!-- <div class="profile">
 					<button type="button">[##_blog_image_##]</button>
 					<nav>
 						<ul>
@@ -56,7 +56,7 @@
 							<li class="logout"><a href="#">로그아웃</a></li>
 						</ul>
 					</nav>
-				</div>
+				</div> -->
 				<button type="button" class="menu"><span>메뉴</span></button>
 			</div>
 			<nav id="gnb">
@@ -363,9 +363,11 @@
 					</s_permalink_article_rep>
 				</s_article_protected>
 
+				<!--blog 본문 형식 시작-->
 				<div class="inner">
 					<s_article_rep>
 
+						<!--이건 뭐야 진짜--><!--쓰긴 썼음-->
 						<s_index_article_rep>
 							<div class="post-item">
 								<a href="[##_article_rep_link_##]">
@@ -376,13 +378,14 @@
 									</span>
 									<span class="title">[##_article_rep_title_##]</span>
 									<span class="excerpt">[##_article_rep_summary_##]</span>
-								<span class="meta">
+									<span class="meta">
 										<span class="date">[##_article_rep_simple_date_##]</span>
 									</span>
 								</a>
 							</div>
 						</s_index_article_rep>
 
+						<!--본문 커버--><!--씀-->
 						<s_permalink_article_rep>
 							<div class="post-cover"<s_article_rep_thumbnail> style="background-image:url([##_article_rep_thumbnail_raw_url_##])"</s_article_rep_thumbnail>>
 								<div class="inner">
@@ -506,6 +509,8 @@
 					</s_article_rep>
 
 				</div>
+				<!--blog 본문 형식 끝-->						
+
 
 				<s_tag>
 					<div class="post-header">
