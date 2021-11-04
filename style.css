@@ -49,7 +49,7 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
   right: 0;
   /*500이 최선인가?? 임의 설정값*/
   z-index: 500;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.9);
   border-bottom: 1px solid transparent;
 }
 /*inner class 가 여러개입니다 잘 기억해두십시오*/
@@ -91,7 +91,7 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
   /*position은 left,right,top,bottom이랑 같이 쓰는거구나..*/
   position: absolute;
   top: 24px;
-  right: 0;
+  right: 30px;
 }
 /*검색 아이콘 + transition*/
 #header .util .search{
@@ -117,7 +117,7 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
   border-radius: 50%;
   /*양수:들여쓰기, 음수:내어쓰기*/
   text-indent: -999em;
-  background: rgb(146, 27, 27) url(./images/search-interface-symbol.svg) no-repeat 0 0;
+  background: rgb(255, 255, 255) url(./images/search-interface-symbol.svg) no-repeat 0 0;
   vertical-align: middle;
   outline: none;
   /*마우스 올리면 커서 생기게*/
@@ -203,17 +203,16 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
   width: 235px;
   margin-left: 1015px;
   word-break: break-word;
-  background-color: rgba(110, 133, 100, 0.5);
-  border: 3px solid white;
-  border-radius: 20px;
 }
 #container .content-wrap nav ul {
   padding: 15px 10px 3px;
-  font-size: 0.8em;
+  font-size: 0.75em;
+  color: rgb(107, 107, 107);
 }
 #container .content-wrap nav ul li {
   line-height: 2.2;
   list-style: none;
+  border-left: 2px solid rgba(110, 133, 100, 0.5);
   padding-left: 5px;
 }
 #container .content-wrap nav ul .space {
@@ -230,6 +229,12 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
 }
 #container .content-wrap nav ul li.nav-H4 {
   padding-left: 60px;
+}
+#container .content-wrap nav ul li.bold {
+  font-weight: 700;
+  color: rgb(20, 20, 20);
+  border-left: 2px solid transparent;
+  background-color: rgba(110, 133, 100, 0.5);
 }
 #content {
   float: left;
