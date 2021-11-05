@@ -270,16 +270,18 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
 .menu.after {
   width: 330px;
   /*height을 안적었는데 잘 나온다고?*/
-  background-color: rgba(110, 133, 100, 0.5);
+  background-color: rgb(173, 187, 167, 0.95);
   padding: 31px 0; 
 }
 /*메뉴 디자인*/
 .menu-contents .sidebar {
+  display: none;
   visibility: hidden;
   /* transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out; */
 }
 .menu-contents .sidebar.after {
+  display: block;
   visibility: visible;
   /*fade-in animation*/
   animation: fade-in 0.5s;
@@ -918,6 +920,39 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
   vertical-align: middle;
 }
 
+/*본문 이후 tags*/
+.tags {
+  margin-bottom: 45px;
+  font-size: 0;
+}
+.tags:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.tags h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.tags a {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 30px;
+  padding: 0 17px;
+  border-radius: 50px;
+  margin: 0 10px 12px 0;
+  vertical-align: middle;
+  color: #333;
+  background-color:rgba(110, 133, 100, 0.5);
+}
+.tags a:hover,
+.tags a:focus {
+  color: white;
+  cursor: pointer;
+}
 
 
 
