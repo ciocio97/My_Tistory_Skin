@@ -933,7 +933,7 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
   visibility: hidden;
 }
 .tags h2 {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   font-size: 20px;
   font-weight: 600;
 }
@@ -952,6 +952,61 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
 .tags a:focus {
   color: white;
   cursor: pointer;
+}
+/*본문 이후 관련글*/
+.related-articles {
+  margin-bottom: 55px;
+}
+.related-articles h2 {
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.related-articles ul {
+  display: inline-block;
+  width: 100%;
+  margin-left: -2%;
+  padding: 5px;
+  vertical-align: top;
+}
+.related-articles ul li {
+  float: left;
+  width: 25%;
+  box-sizing: border-box;
+  list-style: none;
+  text-indent: 0px;
+  padding-left: 2%;
+}
+.related-articles ul li:first-child {
+  margin-left: 0;
+}
+.related-articles ul li a {
+  color: #777;
+}
+.related-articles ul li a:hover,
+.related-articles ul li a:focus {
+  color: #333;
+}
+.related-articles ul li figure {
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-bottom: 70%;
+  margin-bottom: 9px;
+  background-color: #f8f8f8;
+}
+.related-articles ul li figure img {
+  width: 100%;
+  height: auto;
+  /* border: 1px solid black; */
+}
+.related-articles ul li .title {
+  display: block;
+  overflow: hidden;
+  max-width: 95%;
+  height: 40px;
+  font-size: 0.875em;
+  text-overflow: ellipsis; /*글 넘어가면 ...*/
 }
 
 
