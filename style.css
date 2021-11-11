@@ -934,7 +934,7 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
 }
 .tags h2 {
   margin-bottom: 30px;
-  font-size: 20px;
+  font-size: 20px; /*단위 em -> px 괜춘 ?*/
   font-weight: 600;
 }
 .tags a {
@@ -1008,6 +1008,53 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
   font-size: 0.875em;
   text-overflow: ellipsis; /*글 넘어가면 ...*/
 }
+/*본문 이후 댓글*/
+.comments {
+  margin-bottom: 60px;
+}
+.comments h2 {
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.comments h2 .count {
+  margin-left: 5px;
+  color:rgba(110, 133, 100, 0.5);
+}
+.comment-list {
+  margin-bottom: 60px;
+  border-top: 1px solid #eee;
+}
+.comment-list ul li {
+  display: inline-block;
+  width: 100%;
+  padding: 35px 0 30px;
+  border-bottom: 1px solid #eee;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+.comment-list ul li .author-meta {
+  position: relative;
+  margin-bottom: 10px;
+  padding: 2px 0 0 80px;
+  font-size: 1em;
+  color: #888;
+}
+.comment-list ul li .author-meta a {
+  color: #999; /*일단 색 맘에 안든다.*/
+}
+.comment-list ul li .author-meta a:before,
+.comment-list ul li .author-meta span:before {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  margin: 0 7px 0 5px;
+  background-color: #e3e3e3;
+  vertical-align: middle;
+}
+
+
+
 
 
 
